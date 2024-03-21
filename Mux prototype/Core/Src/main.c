@@ -127,20 +127,55 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_13, GPIO_PIN_RESET);
-	  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_12, GPIO_PIN_SET);
-	  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_11, GPIO_PIN_SET);
-	  HAL_Delay(intervalTime*1000);
-
 	  for(int i=0; i<8;i++){
 		  switch(i){
 		  case 0:
-			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_13, GPIO_PIN_RESET);
-			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_12, GPIO_PIN_RESET);
-			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_11, GPIO_PIN_RESET);
+			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_13, GPIO_PIN_RESET);
+			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12, GPIO_PIN_RESET);
+			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_11, GPIO_PIN_RESET);
+			  HAL_Delay(intervalTime*1000);
+			  break;
 		  case 1:
+			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_13, GPIO_PIN_RESET);
+			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_12, GPIO_PIN_RESET);
+			  HAL_GPIO_WritePin(GPIOD,GPIO_PIN_11, GPIO_PIN_SET);
+			  HAL_Delay(intervalTime*1000);
+			  break;
+		  case 2:
+			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_13, GPIO_PIN_RESET);
+			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_12, GPIO_PIN_SET);
+			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_11, GPIO_PIN_RESET);
+			  HAL_Delay(intervalTime*1000);
+			  break;
+		  case 3:
+			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_13, GPIO_PIN_RESET);
+			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_12, GPIO_PIN_SET);
+			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_11, GPIO_PIN_SET);
+			  HAL_Delay(intervalTime*1000);
+			  break;
+		  case 4:
+			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_13, GPIO_PIN_SET);
 			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_12, GPIO_PIN_RESET);
 			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_11, GPIO_PIN_RESET);
+			  HAL_Delay(intervalTime*1000);
+			  break;
+		  case 5:
+			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_13, GPIO_PIN_SET);
+			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_12, GPIO_PIN_RESET);
+			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_11, GPIO_PIN_SET);
+			  HAL_Delay(intervalTime*1000);
+			  break;
+		  case 6:
+			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_13, GPIO_PIN_SET);
+			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_12, GPIO_PIN_SET);
+			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_11, GPIO_PIN_RESET);
+			  HAL_Delay(intervalTime*1000);
+			  break;
+		  case 7:
+			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_13, GPIO_PIN_SET);
+			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_12, GPIO_PIN_SET);
+			  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_11, GPIO_PIN_SET);
+			  HAL_Delay(intervalTime*1000);
 			  break;
 		  }
 	  }
